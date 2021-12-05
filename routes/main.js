@@ -21,6 +21,10 @@ router.get('/api/tutorial', (req, res) => {
     res.sendFile(__path + '/views/tutorial.html')
 })
 
+router.get('/api/about', (req, res) => {
+    res.sendFile(__path + '/views/about.html')
+})
+
 router.get('/api/status', async(req, res) => {  
 
 var date = new Date
@@ -43,7 +47,7 @@ var port = process.env.PORT || 8080 || 5000 || 3000
         uptime: muptime(process.uptime()),
         speed: `${neww - old}ms`,
         info:{       
-            owner: 'alpin',            
+            owner: 'katashi',            
             apikey: 'Chat Owner: https://wa.me/6289690719275'
         }
     }
